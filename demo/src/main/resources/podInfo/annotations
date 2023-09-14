@@ -1,0 +1,5 @@
+build="two"
+builder="john-doe"
+kubectl.kubernetes.io/last-applied-configuration="{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{\"build\":\"two\",\"builder\":\"john-doe\"},\"labels\":{\"cluster\":\"test-cluster1\",\"rack\":\"rack-22\",\"zone\":\"us-est-coast\"},\"name\":\"kubernetes-downwardapi-volume-example\",\"namespace\":\"k8s-event-logger-operator\"},\"spec\":{\"containers\":[{\"args\":[\"while true; do if [[ -e /etc/podinfo/labels ]]; then echo -en '\\\\n\\\\n'; cat /etc/podinfo/labels; fi; if [[ -e /etc/podinfo/annotations ]]; then echo -en '\\\\n\\\\n'; cat /etc/podinfo/annotations; fi; sleep 5; done;\"],\"command\":[\"sh\",\"-c\"],\"image\":\"registry.k8s.io/busybox\",\"name\":\"client-container\",\"volumeMounts\":[{\"mountPath\":\"/etc/podinfo\",\"name\":\"podinfo\"}]}],\"volumes\":[{\"downwardAPI\":{\"items\":[{\"fieldRef\":{\"fieldPath\":\"metadata.labels\"},\"path\":\"labels\"},{\"fieldRef\":{\"fieldPath\":\"metadata.annotations\"},\"path\":\"annotations\"}]},\"name\":\"podinfo\"}]}}\n"
+kubernetes.io/config.seen="2023-09-14T19:05:08.594102401Z"
+kubernetes.io/config.source="api"
